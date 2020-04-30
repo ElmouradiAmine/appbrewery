@@ -10,39 +10,80 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blue,
         body: SafeArea(
-                  child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage(
+                  "images/amine.jpg",
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                  ),
-                ],
+              Text(
+                "Amine Elmouradi",
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                  color: Colors.white,
+                ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
+              Text(
+                "FLUTTER DEVELOPER ",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Source Sans Pro',
+                    color: Colors.blue[100],
+                    letterSpacing: 2.5),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.blue[100],
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    '+212 7 62 21 03 95',
+                    style: TextStyle(
+                      color: Colors.blue[900],
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    'elmouradi.amine98@gmail.com',
+                    style: TextStyle(
+                      color: Colors.blue[900],
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
         ),
-       
       ),
     );
   }
